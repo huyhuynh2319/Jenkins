@@ -28,13 +28,13 @@ pipeline {
             post{
                 failure {
                     emailext subject: "TESTING STATUS - FAILURE",
-                    mail to: "huyhuynh2319@gmail.com",
+                    to: "huyhuynh2319@gmail.com",
                     body: "The pipeline testing status failed! Check the log attachment below",
                     attachLog: true
                 }
                 success {
                     emailext subject: "TESTING STATUS - SUCCESS",
-                    mail to: "huyhuynh2319@gmail.com",
+                    to: "huyhuynh2319@gmail.com",
                     body: "The pipeline testing status was successful! Check the log attachment below",
                     attachLog: true
                 }
@@ -54,13 +54,13 @@ pipeline {
             post{
                 failure {
                     emailext subject: "Security Scan - Failure ${currentBuild.fullDisplayName}",
-                    mail to: "huyhuynh2319@gmail.com",
+                    to: "huyhuynh2319@gmail.com",
                     body: "The Security Scan stage has failed.",
                     attachLog: true
                 }
                 success {
                     emailext subject: "Security Scan - Success ${currentBuild.fullDisplayName}",
-                    mail to: "huyhuynh2319@gmail.com",
+                    to: "huyhuynh2319@gmail.com",
                     body: "The Security Scan stage has completed successfully.",
                     attachLog: true
                 }
